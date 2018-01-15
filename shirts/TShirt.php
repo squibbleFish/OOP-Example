@@ -17,4 +17,16 @@ class TShirt extends Shirt {
         $this->set_style( $style );
     }
 
+    /**
+     * Get our full shirt options
+     * @return array
+     */
+    public function get_shirt() : array {
+        return [
+            $this->style,
+            $this->size,
+            $this->color,
+        ];
+    }
+
 }

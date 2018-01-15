@@ -8,20 +8,24 @@ namespace Shirt;
 Class Shirt {
 
     /**
-     * @var
+     * @var string Style
      */
     protected $style;
 
     /**
-     * @var
+     * @var string Size
      */
     protected $size;
 
     /**
-     * @var
+     * @var string Color
      */
     protected $color;
 
+    /**
+     * @var array Available Sizes
+     * @todo: This may normally be an object in a database
+     */
     static protected $all_sizes = [
         'S',
         'M',
@@ -30,6 +34,10 @@ Class Shirt {
         'XXL'
     ];
 
+    /**
+     * @var array Available Colors
+     * @todo: This may normally be something found in our database
+     */
     static protected $all_colors = [
         'cornflower blue',
         'monolith black',
@@ -39,7 +47,7 @@ Class Shirt {
 
     /**
      * Shirt constructor.
-     * @todo This isnt really needed in this simple example, but could be used for future iterations
+     * @todo This isn't really needed in this simple example, but could be used for future iterations
      */
     public function __construct() {}
 
@@ -74,17 +82,4 @@ Class Shirt {
         }
         $this->size = $size;
     }
-
-    /**
-     * Get our full shirt options
-     * @return array
-     */
-    public function get_shirt() : array {
-        return [
-            $this->style,
-            $this->size,
-            $this->color,
-        ];
-    }
-
 }
